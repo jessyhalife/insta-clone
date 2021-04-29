@@ -5,15 +5,16 @@ import {
   Textarea,
   Image,
   Icon,
+  Input,
+  Box,
 } from "@chakra-ui/react";
 import { BsHeart, BsChat, BsBookmark } from "react-icons/bs";
 import { IoPaperPlaneOutline } from "react-icons/io5";
+import { AiOutlineSmile } from "react-icons/ai";
 
 import React from "react";
 
-interface Props {}
-
-const Post: React.FC = (props: Props) => {
+const Post: React.FC = () => {
   return (
     <Stack
       direction="column"
@@ -43,7 +44,12 @@ const Post: React.FC = (props: Props) => {
         </Text>
       </Stack>
       <Image src={"https://place-hold.it/400"} maxHeight={400} />
-      <Stack direction="column" paddingTop={4} spacing={5}>
+      <Stack
+        direction="column"
+        paddingTop={4}
+        spacing={5}
+        backgroundColor="white"
+      >
         <Stack
           direction="row"
           spacing={6}
@@ -76,7 +82,35 @@ const Post: React.FC = (props: Props) => {
         <Text fontSize={10} paddingX={4} color="gray.500">
           HACE 7 HORAS
         </Text>
-        <Textarea variant="unstyled" borderTopWidth={1}></Textarea>
+        <Box position="relative">
+          <Icon
+            as={AiOutlineSmile}
+            h={6}
+            w={8}
+            position="absolute"
+            transform="translate(12px, 16px)"
+          ></Icon>
+          <Text
+            color="blue.200"
+            fontSize="sm"
+            fontWeight="bold"
+            position="absolute"
+            right={3}
+            transform="translateY(16px)"
+            
+          >
+            Publicar
+          </Text>
+          <Input
+            margin={0}
+            variant="unstyled"
+            borderTopWidth={1}
+            borderRadius={0}
+            height={14}
+            paddingLeft={16}
+            placeholder="Agrega un comentario..."
+          ></Input>
+        </Box>
       </Stack>
     </Stack>
   );

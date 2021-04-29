@@ -2,9 +2,9 @@ import { Box, Icon, Input, Stack, Image } from "@chakra-ui/react";
 import React from "react";
 import { BsChatDots, BsCompass, BsHeart, BsHouseDoor } from "react-icons/bs";
 
-interface Props {}
 
-const Header: React.FC = (props: Props) => {
+
+const Header: React.FC = () => {
   return (
     <Box
       borderBottomWidth={1}

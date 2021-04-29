@@ -5,9 +5,9 @@ import Feed from "./Feed";
 import Sidebar from "./Sidebar";
 import Stories from "./Stories";
 
-interface Props {}
 
-const Content: React.FC = (props: Props) => (
+
+const Content: React.FC = () => (
   <>
     <Stack
       direction="row"

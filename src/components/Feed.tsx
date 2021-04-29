@@ -2,12 +2,11 @@ import { Stack } from "@chakra-ui/react";
 import React from "react";
 
 import Post from "./Post";
+import PostSkeleton from "./PostSkeleton";
 
 import Stories from "./Stories";
 
-interface Props {}
-
-const Feed: React.FC = (props: Props) => {
+const Feed: React.FC = () => {
   return (
     <>
       <Stack direction="column" spacing={8} width="100%">
@@ -20,7 +19,9 @@ const Feed: React.FC = (props: Props) => {
           maxWidth="100%"
         >
           <Post />
-          <Post />
+          <PostSkeleton />
+          <PostSkeleton />
+          <PostSkeleton />
         </Stack>
       </Stack>
     </>

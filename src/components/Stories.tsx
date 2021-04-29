@@ -1,9 +1,9 @@
 import { Box, SkeletonCircle, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
-interface Props {}
 
-const Stories: React.FC = (props: Props) => {
+
+const Stories: React.FC = () => {
   return (
     <Stack
       direction="row"

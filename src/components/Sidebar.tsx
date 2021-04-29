@@ -1,9 +1,9 @@
 import { Box, SkeletonCircle, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 
-interface Props {}
 
-const Sidebar: React.FC = (props: Props) => {
+
+const Sidebar: React.FC = () => {
   return (
     <Stack direction="column" display={{ base: "none", lg: "block" }}>
       <Stack
